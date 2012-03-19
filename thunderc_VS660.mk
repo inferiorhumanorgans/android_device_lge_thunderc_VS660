@@ -12,3 +12,10 @@ $(call inherit-product, device/lge/thunderc_common/thunderc_common.mk)
 PRODUCT_COPY_FILES += \
     vendor/lge/thunderc/proprietary/VS660/system/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
     vendor/lge/thunderc/proprietary/VS660/system/lib/libloc_ext.so:system/lib/libloc_ext.so
+
+# Add in model specific kernel modules
+PRODUCT_COPY_FILES += \
+    device/lge/thunderc_VS660/files/kernel/cifs.ko:system/lib/modules/cifs.ko \
+    device/lge/thunderc_VS660/files/kernel/wireless.ko:system/lib/modules/wireless.ko \
+    device/lge/thunderc_VS660/files/kernel/tun.ko:system/lib/modules/tun.ko
+
